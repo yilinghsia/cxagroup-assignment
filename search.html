@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>Search Spotify artists</title>
+
+  <!--  Styles  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/index.processed.css">
+</head>
+
+<body>
+
+  <div id="search">
+    <input type="text" id="artist-name" placeholder="Search on artist name" name="search-artist">
+  </div>
+
+  <div id="results" class="container-fluid"></div>
+  <div id='loadingmessage' style='display:none'>
+    <img id="loader" src='/styles/images/loader.gif' />
+  </div>
+
+
+  <div id='errormessage' style='display:none'>
+    Something went wrong. Please reload the page. Or try <a href="/">logging in again</a>.
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="scripts/handlebars-v4.0.10.js"></script>
+  <script src="scripts/index.js"></script>
+
+  <script id="results-template" type="text/x-handlebars-template">
+    <div class="row">
+    {{#each artists.items}} 
+      {{#if images.0.url.length}} 
+        {{#if_eq images.0.width images.0.height}}
+
+          <div class="result col-6 col-md-4 col-lg-3 col-xl-2">
+            <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+            <span class="album-title">{{name}}</span>
+          </div>
+
+        {{/if_eq}} 
+      {{/if}} 
+    {{/each}}
+    </div>
+  </script>
+</body>
+
+</html>

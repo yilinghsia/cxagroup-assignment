@@ -1,0 +1,82 @@
+body {
+  background: #f5f5f5;
+  padding: 0;
+  margin: 0;
+}
+
+#artist-name {
+  border-radius: 10px;
+  border: 1px solid #d9dadc;
+
+  height: 28px;
+  width: 300px;
+  
+  padding: 0 10px;
+  margin: 0 auto;
+  display: block;
+}
+
+#search {
+	margin: 20px 0;
+} 
+
+
+#loader, #errormessage{
+	width: 40px; 
+	margin: 0 auto;
+	display: block
+}
+
+ #errormessage{
+ 	width: 200px;
+ }
+
+/*#results { 
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 300px); 
+	justify-content: space-evenly; 
+	grid-gap: 20px ;
+	padding: 0 50px
+}*/
+
+.result {
+	text-align: center; 
+	margin-bottom: 30px;
+}
+
+.cover {
+	width: 200px;
+	height: 200px;
+	background-size: 100%;
+	display: inline-block;	
+}
+
+.album-title {
+	display: block;
+}
+
+/* Support for Edge until grid comes out */
+/*@supports (-ms-ime-align: auto) { 
+	#results {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	#results::after {
+		content: "";
+  		flex: auto;
+	}
+
+	.result { 
+		margin: 20px;
+	}
+}*/
+
+/* Small screens */
+/*@media all and (max-width: 500px) {
+#results {
+     On small screens, we are no longer using row direction but column 
+    flex-direction: column;
+  }
+}*/
