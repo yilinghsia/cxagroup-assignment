@@ -31,13 +31,6 @@ body {
  	width: 200px;
  }
 
-/*#results { 
-	display: grid;
-	grid-template-columns: repeat(auto-fill, 300px); 
-	justify-content: space-evenly; 
-	grid-gap: 20px ;
-	padding: 0 50px
-}*/
 
 .result {
 	text-align: center; 
@@ -55,28 +48,20 @@ body {
 	display: block;
 }
 
-/* Support for Edge until grid comes out */
-/*@supports (-ms-ime-align: auto) { 
-	#results {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	#results::after {
-		content: "";
-  		flex: auto;
-	}
-
-	.result { 
-		margin: 20px;
-	}
-}*/
-
 /* Small screens */
-/*@media all and (max-width: 500px) {
-#results {
-     On small screens, we are no longer using row direction but column 
-    flex-direction: column;
-  }
-}*/
+@media all and (max-width: 500px) {
+	#results {
+	    /* On small screens, we are no longer using row direction but column */
+	    flex-direction: column;
+	 }
+
+	.col-6 {
+	max-width: 100%;
+	flex: 0 0 100%;
+	}
+	
+	#artist-name {
+	width: 80%;
+	}
+
+}
