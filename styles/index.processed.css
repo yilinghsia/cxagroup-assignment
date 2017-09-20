@@ -4,6 +4,20 @@ body {
   margin: 0;
 }
 
+#authorize-container {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#authorize {
+	background-color: #1db954;
+	color: #fff;
+	border: none;
+	border-radius: 500px;
+	font-size: 16px;
+	padding: 21px 56px 19px
+}
+
 #artist-name {
   border-radius: 10px;
   border: 1px solid #d9dadc;

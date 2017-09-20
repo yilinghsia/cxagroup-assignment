@@ -3,7 +3,7 @@ $(document).ready(function() {
   // For more see: https://developer.spotify.com/news-stories/2017/01/27/removing-unauthenticated-calls-to-the-web-api/
   $("#authorize").click(function() {
     var clientId = "375a967dc3604bf5995b0792bc67f491";
-    var redirectUrl = "http://192.168.56.1:8000/search.html";
+    var redirectUrl = "http://localhost:8000/search.html";
     window.location = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUrl}&response_type=token`;
   });
 
@@ -25,8 +25,6 @@ $(document).ready(function() {
       timer = setTimeout(callback, ms);
     };
   })();
-
-  SearchSpotify("BigBang");
 });
 
 function ClearSearches() {
